@@ -57,6 +57,18 @@ def draw_shape(shape, color, x, y, l, h = 0):
             return perimeter
         else:
             return 0
+    elif shape == 'c':
+        if circle_will_fit(x, y, l) is not False:
+            t.fillcolor(color)
+            t.begin_fill()
+            t.circle(l)
+            t.end_fill()
+            t.setheading(0)
+            setup(0, 0)
+            perimeter = PI * (l ^ 2)
+            return perimeter
+        else:
+            return 0
 
 
 def main():
