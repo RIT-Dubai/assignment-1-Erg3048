@@ -5,6 +5,7 @@ XMAX = 200
 XMIN = -XMAX
 YMAX = 200
 YMIN = -YMAX
+PI = 3.1415926535
 
 
 def grid():
@@ -39,7 +40,7 @@ def circle_will_fit(x, y, r):
 def draw_shape(shape, color, x, y, l, h = 0):
     setup(x, y)
     if shape == "r":
-        if rectangle_will_fit(x, y, l, h) is True:
+        if rectangle_will_fit(x, y, l, h) is not False:
             t.fillcolor(color)
             t.begin_fill()
             t.forward(l)
@@ -60,7 +61,7 @@ def draw_shape(shape, color, x, y, l, h = 0):
 
 def main():
     grid()
-    draw_shape('r','red',100,100,70,50)
+    print(draw_shape('r','red',100,100,70,50))
 
 
 main()
