@@ -20,3 +20,6 @@ def test_draw_shape_rectangle():
     assert perimeter == p, "Perimeter is incorrect"
 
 
+def test_circle_will_fit():
+    result = main.rectangle_will_fit(100, 100, 180)
+    assert result is not False, "Circle does not fit"

@@ -22,7 +22,7 @@ def setup(x, y):
     t.pendown()
 
 
-def rectangle_will_fit(x, y, l, h):
+def rectangle_will_fit(x, y, l, h = 0):
     if (x+l >= XMAX or x <= XMIN):
         return False
     if (y+h >= YMAX or y <= YMIN):
@@ -32,20 +32,23 @@ def rectangle_will_fit(x, y, l, h):
 def draw_shape(shape, color, x, y, l, h = 0):
     setup(x, y)
     if shape == "r":
-        t.fillcolor(color)
-        t.begin_fill()
-        t.forward(l)
-        t.left(90)
-        t.forward(h)
-        t.left(90)
-        t.forward(l)
-        t.left(90)
-        t.forward(h)
-        t.setheading(0)
-        t.end_fill()
-        perimeter = 2*(l+h)
-        setup(0,0)
-        return perimeter
+        if rectangle_will_fit(x, y, l, h) is True:
+            t.fillcolor(color)
+            t.begin_fill()
+            t.forward(l)
+            t.left(90)
+            t.forward(h)
+            t.left(90)
+            t.forward(l)
+            t.left(90)
+            t.forward(h)
+            t.setheading(0)
+            t.end_fill()
+            perimeter = 2 * (l + h)
+            setup(0, 0)
+            return perimeter
+        else:
+            return 0
 
 
 def main():
