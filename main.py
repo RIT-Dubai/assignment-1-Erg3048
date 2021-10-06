@@ -99,7 +99,8 @@ def main():
     grid()
     p1 = draw_shape('r','red',100,100,70,50)
     p2 = draw_shape('c', 'green', -100, -100, 60)
-    print(p1, p2)
+    p3 = draw_shape('t', 'blue', -100, 100, 80)
+    print(p1, p2, p3)
 
 
 main()
