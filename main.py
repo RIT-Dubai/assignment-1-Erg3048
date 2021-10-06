@@ -78,7 +78,7 @@ def draw_shape(shape, color, x, y, l, h = 0):
         else:
             return 0
     elif shape == 't':
-        if triangle_will_fit(x, y, l):
+        if triangle_will_fit(x, y, l) is not False:
             t.fillcolor(color)
             t.begin_fill()
             t.forward(l)
