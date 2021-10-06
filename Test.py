@@ -11,7 +11,7 @@ def test_rectangle_will_fit():
 def test_draw_shape_rectangle():
     x = 0
     y = 0
-    perimeter = main.draw_shape('rectangle', 'red', 100, 100, 70, 50)
+    perimeter = main.draw_shape('r', 'red', 100, 100, 70, 50)
     assert t.fillcolor() == 'red', "color is incorrect"
     assert t.xcor() == x, "x coordinate is incorrect"
     assert t.ycor() == y, "y coordinate is incorrect"
