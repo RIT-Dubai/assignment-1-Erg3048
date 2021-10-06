@@ -44,6 +44,7 @@ def draw_shape(shape, color, x, y, l, h = 0):
         t.setheading(0)
         t.end_fill()
         perimeter = 2*(l+h)
+        setup(0,0)
         return perimeter
 
 
