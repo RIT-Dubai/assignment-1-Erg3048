@@ -73,7 +73,9 @@ def draw_shape(shape, color, x, y, l, h = 0):
 
 def main():
     grid()
-    print(draw_shape('r','red',100,100,70,50))
+    p1 = draw_shape('r','red',100,100,70,50)
+    p2 = draw_shape('c', 'green', -100, -100, 60)
+    print(p1, p2)
 
 
 main()
