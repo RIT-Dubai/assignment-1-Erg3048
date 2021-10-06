@@ -73,7 +73,7 @@ def draw_shape(shape, color, x, y, l, h = 0):
             t.end_fill()
             t.setheading(0)
             setup(0, 0)
-            perimeter = PI * (l ^ 2)
+            perimeter = PI * l * 2
             return perimeter
         else:
             return 0

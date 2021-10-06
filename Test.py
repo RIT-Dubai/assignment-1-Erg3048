@@ -36,11 +36,23 @@ def test_draw_shape_circle():
     assert t.xcor() == x, "x coordinate is incorrect"
     assert t.ycor() == y, "y coordinate is incorrect"
     assert t.heading() == 0, "Turtle is not facing east"
-    p = PI * (80 ^ 2)
+    p = PI * 2 * 80
     assert perimeter == p, "Perimeter is incorrect"
 
 
 def test_triangle_will_fit():
     result = main.triangle_will_fit(-100, 100, 80)
     assert result is not False, "Triangle does not fit"
+
+
+def test_draw_shape_triangle():
+    x = 0
+    y = 0
+    perimeter = main.draw_shape('t', 'blue', -100, 100, 80)
+    assert t.fillcolor() == 'blue', "color is incorrect"
+    assert t.xcor() == x, "x coordinate is incorrect"
+    assert t.ycor() == y, "y coordinate is incorrect"
+    assert t.heading() == 0, "Turtle is not heading East"
+    p = 3 * 80
+    assert perimeter == p, "Perimeter is incorrect"
 
