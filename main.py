@@ -16,3 +16,9 @@ def grid():
         t.right(90)
 
 
+def rectangle_will_fit(x, y, l, h):
+    if (x+l >= XMAX or x <= XMIN):
+        return False
+    if (y+h >= YMAX or y <= YMIN):
+        return False
+
