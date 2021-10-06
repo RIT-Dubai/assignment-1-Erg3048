@@ -48,4 +48,12 @@ def draw_shape(shape, color, x, y, l, h = 0):
         return perimeter
 
 
+def main():
+    grid()
+    draw_shape('r','red',100,100,70,50)
+
+
+main()
+
+
 
