@@ -41,6 +41,6 @@ def test_draw_shape_circle():
 
 
 def test_triangle_will_fit():
-    result = main.rectangle_will_fit(130, 100, 80)
+    result = main.triangle_will_fit(130, 100, 80)
     assert result is not False, "Triangle does not fit"
 

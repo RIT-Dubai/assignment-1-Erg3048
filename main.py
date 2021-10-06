@@ -37,6 +37,14 @@ def circle_will_fit(x, y, r):
         return False
 
 
+def triangle_will_fit(x, y, l):
+    if (x+l >= XMAX or x <= XMIN):
+        return False
+    h = l * 0.866
+    if (y+h >= YMAX or y <= YMIN):
+        return False
+
+
 def draw_shape(shape, color, x, y, l, h = 0):
     setup(x, y)
     if shape == "r":
