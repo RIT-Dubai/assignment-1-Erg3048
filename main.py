@@ -16,9 +16,30 @@ def grid():
         t.right(90)
 
 
+def setup(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+
 def rectangle_will_fit(x, y, l, h):
     if (x+l >= XMAX or x <= XMIN):
         return False
     if (y+h >= YMAX or y <= YMIN):
         return False
 
+
+def draw_shape(shape, color, x, y, l, h = 0):
+    setup(x, y)
+    if shape == "r":
+        t.fillcolor(color)
+        t.begin_fill()
+        t.forward(l)
+        t.left(90)
+        t.forward(h)
+        t.left(90)
+        t.forward(l)
+        t.left(90)
+        t.forward(h)
+        t.setheading(0)
+        t.end_fill()

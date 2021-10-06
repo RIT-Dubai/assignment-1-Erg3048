@@ -18,3 +18,5 @@ def test_draw_shape_rectangle():
     assert t.heading() == 0, "turtle not facing East"
     p = 2*(70+50)
     assert perimeter == p, "Perimeter is incorrect"
+
+
