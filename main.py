@@ -77,7 +77,23 @@ def draw_shape(shape, color, x, y, l, h = 0):
             return perimeter
         else:
             return 0
-
+    elif shape == 't':
+        if triangle_will_fit(x, y, l)
+            t.fillcolor(color)
+            t.begin_fill()
+            t.forward(l)
+            t.left(120)
+            t.forward(l)
+            t.left(120)
+            t.forward(l)
+            t.end_fill()
+            t.setheading(0)
+            setup(0, 0)
+            perimeter = 3 * l
+            return perimeter
+        else:
+            return 0
+    return 0
 
 def main():
     grid()
