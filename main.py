@@ -29,6 +29,13 @@ def rectangle_will_fit(x, y, l, h = 0):
         return False
 
 
+def circle_will_fit(x, y, r):
+    if (x+r >= XMAX or x-r <= XMIN):
+        return False
+    if (y+r >= YMAX or y-r <= YMIN):
+        return False
+
+
 def draw_shape(shape, color, x, y, l, h = 0):
     setup(x, y)
     if shape == "r":
